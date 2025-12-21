@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Names List</title>
+</head>
+<body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+    <p>Hello from the frontend</p>
+    <h2>Names from Backend:</h2>
+    <ul>
+        <% if (data && data.data) { %>
+            <% data.data.forEach(function(name) { %>
+                <li><%= name %></li>
+            <% }); %>
+        <% } else { %>
+            <li>No data available</li>
+        <% } %>
+    </ul>
+
+    <style>
+        body {
+            background-color: rgb(183, 0, 255);
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 20px;
+        }
+        li {
+            padding: 5px 0;
+            font-size: 18px;
+        }
+    </style>    
+</body>
+</html>
